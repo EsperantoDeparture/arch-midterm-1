@@ -1,7 +1,7 @@
 version: '3.4'
 
 services:
-  database:
+  mysql:
     image: mysql:8.0.19
     ports:
     - 3307:3306
@@ -9,3 +9,11 @@ services:
     environment:
       MYSQL_DATABASE: arch1db
       MYSQL_ALLOW_EMPTY_PASSWORD: 1
+  redis:
+    build: ./redis-df
+    ports:
+    - 6379:6379
+  api:
+    build: ./
+    ports:
+    - 3000:3000

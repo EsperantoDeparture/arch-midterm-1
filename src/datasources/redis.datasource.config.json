@@ -1,7 +1,7 @@
 {
   "name": "redis",
   "connector": "kv-redis",
-  "host": "localhost",
+  "host": "redis",
   "port": 6379,
   "password": "SECRET",
   "db": "defaultdb"
