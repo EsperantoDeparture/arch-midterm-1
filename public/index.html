@@ -56,11 +56,28 @@
 
 <body>
   <div class="info">
-    <h1>arch-midterm-1</h1>
+    <h3>Parcial 1 Arquitectura de Software</h3>
     <p>Version 1.0.0</p>
+    <h4>Patrones de diseño empleados</h4>
+    <ul>
+      <li>Object Relational Mapping (ORM). Este patrón de diseño consiste en
+      abstraer los esquemas relacionales en clases, lo que hace más fácil
+      la interacción con bases de datos relacionales, ya que no se tiene
+      que utilizar un lenguaje especializado como SQL todo el tiempo, lo que
+      es conveniente para consultas sencillas.</li>
+      <li>Inyección de dependencias. Esta es una técnica en la que un objeto
+      suple las dependencias de otro objeto. Un cliente, por ejemplo DataController,
+      desea acceder a un servicio, por ejemplo DatumRepository. DataController no debería
+      saber cómo construir estos servicios, sino que delega esta responsabilidad a código
+      externo (el inyector). Esta técnica es derivada de la
+      inversión de control.</li>
+      <li>Decorador. Este patrón es usado para agregar funcionalidad extra a funciones,
+      clases o propiedades de las mismas, sin modificar su implementación. En esta
+      aplicación, se utilizó para convertir los métodos de los controladores en
+      endpoints, para definir los modelos de las bases de datos y los repositorios.</li>
+    </ul>
 
-    <h3>OpenAPI spec: <a href="/openapi.json">/openapi.json</a></h3>
-    <h3>API Explorer: <a href="/explorer">/explorer</a></h3>
+    <h5>Use el explorador para acceder a los endpoint: <a href="/explorer">/explorer</a></h5>
   </div>
 
   <footer class="power">
