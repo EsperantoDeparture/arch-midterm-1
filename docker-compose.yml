@@ -10,10 +10,13 @@ services:
       MYSQL_DATABASE: arch1db
       MYSQL_ALLOW_EMPTY_PASSWORD: 1
   redis:
-    build: ./redis-df
+    build: ./redis
     ports:
-    - 6379:6379
+    - 6380:6379
   api:
     build: ./
     ports:
     - 3000:3000
+    depends_on:
+      - mysql
+      - redis
